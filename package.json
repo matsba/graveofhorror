@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "PORT=3001 node bin/www"
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "PORT=3001 node bin/www",
+    "client": "node start-client.js"
+  },
+  "devDependencies": {
+    "concurrently": "3.5.0"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
