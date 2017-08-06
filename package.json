@@ -17,6 +17,7 @@
     "express": "~4.15.2",
     "morgan": "~1.8.1",
     "react-datepicker": "^0.52.0",
-    "react-select": "^1.0.0-rc.5"
+    "react-select": "^1.0.0-rc.5",
+    "mysql": "*"
   }
 }

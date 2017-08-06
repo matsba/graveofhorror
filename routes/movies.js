@@ -1,16 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var mysql = require('mysql');
-
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'matsba',
-  database : 'horrorDB'
-});
-
-console.log("Connecting...")
-connection.connect()
+// write up database connection
+var connection = require('../connection.js');
 
 
 router.get('add', (req, res) => {
@@ -43,10 +34,10 @@ router.get('/', function(req, res, next){
 
     if(!err) {
         res.json(rows);
-    } 
+    }
     else{
         console.log(err)
-    }          
+    }
     });
 
 });
