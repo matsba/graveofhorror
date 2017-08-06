@@ -16,8 +16,9 @@
     "debug": "~2.6.3",
     "express": "~4.15.2",
     "morgan": "~1.8.1",
+    "mysql": "*",
     "react-datepicker": "^0.52.0",
-    "react-select": "^1.0.0-rc.5",
-    "mysql": "*"
+    "react-radio-group": "^3.0.2",
+    "react-select": "^1.0.0-rc.5"
   }
 }

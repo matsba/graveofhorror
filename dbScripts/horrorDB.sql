@@ -9,7 +9,7 @@ CREATE TABLE movies (
     title VARCHAR(255) NOT NULL,
     releaseDate DATETIME NOT NULL,
     originalReleaseYear VARCHAR(255),
-    coverArtUrl VARCHAR(255) NOT NULL,
+    coverArtUrl VARCHAR(255),
     region VARCHAR(255),
     primary key (id)
 )

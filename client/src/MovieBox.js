@@ -5,10 +5,12 @@ class MovieBox extends Component {
     render(){
 
     var movie = this.props.movie
+    //TODO: make own default image
+    var defaultImage = "http://lexingtonvenue.com/media/poster-placeholder.jpg"
 
         return(
             <div className="col-md-3">     
-                <img className="imageBox" src={movie.coverArtUrl} alt={movie.title}></img>
+                <img className="imageBox" src={movie.coverArtUrl || defaultImage} alt={movie.title}></img>
                 <h3>{movie.title}</h3>
                 <table className="table">
                     <tbody>

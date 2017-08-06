@@ -27,7 +27,7 @@ CREATE TABLE `movie` (
   `title` varchar(255) NOT NULL,
   `releaseDate` datetime NOT NULL,
   `originalReleaseYear` varchar(255) DEFAULT NULL,
-  `coverArtUrl` varchar(255) NOT NULL,
+  `coverArtUrl` varchar(255) DEFAULT NULL,
   `region` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=180741 DEFAULT CHARSET=utf8;
