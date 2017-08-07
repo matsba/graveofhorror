@@ -6,8 +6,8 @@ class MovieBox extends Component {
     render(){
 
     var movie = this.props.movie
-    //TODO: make own default image
-    var defaultImage = "http://lexingtonvenue.com/media/poster-placeholder.jpg"
+    
+    var defaultImage = "/assets/missing_image.png"
 
         return(
             <div className="col-md-3">     
