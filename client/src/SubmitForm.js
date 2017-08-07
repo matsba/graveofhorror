@@ -62,14 +62,22 @@ class SubmitForm extends Component {
         });
     }
 
-  handleSubmit(event) {
-    console.log(this.state)
+  handleSubmit(event) {    
+    var data = {} 
+    data.title = this.state.title
+    data.releaseDate = moment(this.state.releaseDate).format("YYYY/MM/DD")
+    data.originalReleaseYear =  this.state.originalReleaseYear
+    data.coverArtUrl = this.state.coverArtUrl        
+    data.region = this.state.region
+
+    console.log(data)
+
     fetch('movies/add', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(this.state)
+        body: JSON.stringify(data)
     })
     this.setState(initialState)
     event.preventDefault();

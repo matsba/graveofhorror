@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
 class MovieBox extends Component {
 
@@ -16,7 +17,7 @@ class MovieBox extends Component {
                     <tbody>
                         <tr>
                             <th>Release: </th>
-                            <td> { movie.releaseDate } </td>
+                            <td> { moment(movie.releaseDate).format("YYYY/MM/DD") } </td>
                         </tr>
                         <tr>
                             <th>Year: </th>
