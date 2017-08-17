@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import chunk from 'lodash/chunk.js';
 import MovieBox from './MovieBox.js'
 
-class ThisMonthsMovies extends Component {
+class MovieSection extends Component {
 
-    state = {movies: []}
+    state = {movies: []}    
 
     componentDidMount() {
-        fetch('/movies')
+        fetch('/movies/' + this.props.movies)
         .then(res => res.json())
         .then(movies => this.setState({ movies }));
     }
@@ -21,7 +21,7 @@ class ThisMonthsMovies extends Component {
 
         return(
         <div>
-            <h1>This Months Blu-rays</h1>
+            <h1>{this.props.title}</h1>
             {rows.map((row, i) =>
                 <div className="row">
                     {row.map(movie =>
@@ -34,4 +34,4 @@ class ThisMonthsMovies extends Component {
     }
 }
 
-export default ThisMonthsMovies
+export default MovieSection

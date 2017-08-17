@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import ThisMonthsMovies from "./ThisMonthsMovies.js";
+import MovieSection from "./MovieSection.js";
 import SubmitForm from "./SubmitForm.js";
 import Navigation from "./Navigation.js";
 
@@ -14,7 +14,9 @@ class App extends Component {
       <div>
         <Navigation/>
         <SubmitForm />
-        <ThisMonthsMovies/>
+        <MovieSection movies="this_month" title="This Month's Movies"/>
+        <MovieSection movies="next_month" title="Next Month's Movies"/>
+        <MovieSection movies="rest_of_the_year" title="Rest of the Year"/>
       </div>      
     );
   }
