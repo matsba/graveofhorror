@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 
-class MovieBox extends Component {
+class MovieBox extends Component {    
 
     render(){
 
-    var movie = this.props.movie
+        const movie = this.props.movie
     
-    var defaultImage = "/assets/missing_image.png"
+        const defaultImage = "/assets/missing_image.png"
 
         return(
             <div className="col-md-3">     
